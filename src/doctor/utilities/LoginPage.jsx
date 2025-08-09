@@ -5,7 +5,8 @@ import * as yup from "yup";
 import { FaUserMd, FaUserNurse, FaUser } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useLoginMutation } from "../docProvider/docQuery/doctorApiSlice";
+import { useLoginMutation } from "../../features/auth/authApi";
+// import { useLoginMutation } from "../docProvider/docQuery/doctorApiSlice";
 
 const demoCredentials = {
   doctor: {

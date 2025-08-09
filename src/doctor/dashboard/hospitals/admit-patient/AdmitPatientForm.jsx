@@ -6,11 +6,8 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Select from "react-select";
 
-import {
-  useAdmitPatientMutation,
-  useGetMyHospitalsQuery,
-  useGetMyPatientsQuery,
-} from "../../../docProvider/docQuery/doctorApiSlice";
+import { useGetMyHospitalsQuery } from "../../../../features/auth/doctorApi";
+import { useAdmitPatientMutation, useGetMyPatientsQuery } from "../../../../features/auth/patientApi";
 
 // ✅ Validation Schema
 const schema = yup.object().shape({

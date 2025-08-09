@@ -1,9 +1,7 @@
-"use client";
-
 import React from "react";
 import { Provider } from "react-redux";
-import { docStore } from "./DocRedux/docStore";
+import { store } from '../../store';
 
 export default function DocReduxWrapper({ children }) {
-  return <Provider store={docStore}>{children}</Provider>;
+  return <Provider store={store}>{children}</Provider>;
 }

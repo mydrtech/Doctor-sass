@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { doctorApiSlice } from "../docQuery/doctorApiSlice";
 
-export const docStore = configureStore({
+export const doc = configureStore({
   reducer: {
     [doctorApiSlice.reducerPath]: doctorApiSlice.reducer,
   },

@@ -5,9 +5,10 @@ import {
   FaSortAmountDownAlt,
   FaUndo,
 } from "react-icons/fa";
-import { useGetMyHospitalsQuery } from "../../../docProvider/docQuery/doctorApiSlice";
+// import { useGetMyHospitalsQuery } from "../../../docProvider/docQuery/doctorApiSlice";
 import Loader from '../../../utilities/Loader';
 import HospitalInfoCard from "../../../shared-components/HospitalInfoCard";
+import { useGetMyHospitalsQuery } from "../../../../features/auth/doctorApi";
 
 const MyHospitals = () => {
   const { data: hospitals, isLoading, refetch } = useGetMyHospitalsQuery();

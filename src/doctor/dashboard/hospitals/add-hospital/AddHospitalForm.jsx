@@ -2,10 +2,11 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { FaHospital, FaMapMarkerAlt } from "react-icons/fa";
-import { useAddHospitalMutation } from "../../../docProvider/docQuery/doctorApiSlice"; // ✅ Adjust path if needed
+// import { useAddHospitalMutation } from "../../../docProvider/docQuery/doctorApiSlice"; // ✅ Adjust path if needed
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useAddHospitalMutation } from "../../../../features/auth/doctorApi";
 
 const schema = yup.object().shape({
   name: yup

@@ -7,11 +7,14 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {  RouterProvider } from "react-router-dom";
 import Router from './routes/Router';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <DocReduxWrapper>
-        <>
+      {/* <DocReduxWrapper> */}
+      <Provider store={store}>
+      <>
           <ToastContainer
             position="top-right"
             autoClose={1500}
@@ -24,6 +27,8 @@ createRoot(document.getElementById('root')).render(
           <RouterProvider router={Router} />
           <ScrollToTopButton></ScrollToTopButton>
           </>
-      </DocReduxWrapper>
+      </Provider>
+       
+      {/* </DocReduxWrapper> */}
   </StrictMode>,
 )

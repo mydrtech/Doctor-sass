@@ -2,15 +2,13 @@ import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { FaPrescriptionBottle, FaFilePdf, FaUser } from "react-icons/fa";
-import {
-  useAddPrescriptionMutation,
-  useGetMyPatientsQuery,
-} from "../../../docProvider/docQuery/doctorApiSlice";
 import { useEffect, useState } from "react";
 import Select from "react-select";
 import Loader from "../../../utilities/Loader";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import { useGetMyPatientsQuery } from "../../../../features/auth/patientApi";
+import { useAddPrescriptionMutation } from "../../../../features/auth/doctorApi";
 
 const schema = yup.object().shape({
   title: yup

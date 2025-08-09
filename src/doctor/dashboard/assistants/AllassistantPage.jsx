@@ -6,8 +6,8 @@ import {
   FaSortAmountDownAlt,
   FaUndo,
 } from "react-icons/fa";
-import { useGetMyAssistantsQuery } from "../../docProvider/docQuery/doctorApiSlice";
 import AssistantInfoCard from "../../shared-components/AssistantInfoCard";
+import { useGetMyAssistantsQuery } from "../../../features/auth/doctorApi";
 
 const AllAssistantPage = () => {
   const { data, isLoading, refetch } = useGetMyAssistantsQuery();

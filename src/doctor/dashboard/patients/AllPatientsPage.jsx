@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaSearch, FaFilter, FaUndo } from "react-icons/fa";
-import { useGetMyPatientsQuery } from "../../docProvider/docQuery/doctorApiSlice";
 import PatientInfoCard from "../../shared-components/PatientInfoCard";
 import Loader from "../../utilities/Loader";
+import { useGetMyPatientsQuery } from "../../../features/auth/patientApi";
 
 const AllPatientsPage = () => {
   const { data, isLoading, refetch } = useGetMyPatientsQuery();

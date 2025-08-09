@@ -3,7 +3,8 @@ import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
-import { useDeleteAssistantMutation } from "../docProvider/docQuery/doctorApiSlice";
+import { useDeleteAssistantMutation } from "../../features/auth/doctorApi";
+// import { useDeleteAssistantMutation } from "../docProvider/docQuery/doctorApiSlice";
 
 const AssistantInfoCard = ({ assistant, refetch }) => {
   const navigate = useNavigate();

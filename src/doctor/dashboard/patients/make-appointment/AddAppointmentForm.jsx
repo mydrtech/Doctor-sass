@@ -16,9 +16,9 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Select from "react-select";
 
-import { useNavigate } from "react-router-dom"; // React Router DOM
-import { useAddPatientAppointmentMutation, useGetMyServicesQuery } from "../../../docProvider/docQuery/doctorApiSlice";
+import { useNavigate } from "react-router-dom"; 
 import Loader from '../../../utilities/Loader';
+import { useAddPatientAppointmentMutation, useGetMyServicesQuery } from "../../../../features/auth/doctorApi";
 
 const today = new Date();
 const oneYearFromToday = new Date(today);
@@ -228,7 +228,7 @@ export default function AddAppointmentForm() {
         <button
           disabled={appointmentLoading}
           type="submit"
-          className="bg-teal-600 text-white px-6 py-2 rounded hover:bg-teal-700 transition w-full"
+          className="btn btn-primary w-full"
         >
           {appointmentLoading ? "Please Wait..." : "Add Appointment"}
         </button>
