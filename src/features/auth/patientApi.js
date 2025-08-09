@@ -35,7 +35,22 @@ export const patientApi = baseApi.injectEndpoints({
                 method: "POST",
                 body: patientData,
             }) 
-        })
+        }),
+         //   prescription for  patient
+         patientPrescription: builder.query({
+            query: () => ({
+                url: `/api/v1/patient/my-prescriptions`,
+                method: "GET"
+            })
+         }),
+         //  update user info for  patient
+        //  updatePatientPersonalInfo: builder.mutation({
+        //     query: (updateData) => ({
+        //         url: `/api/v1/patient/me`,
+        //         method: "PATCH",
+        //         body: updateData
+        //     })
+        //  })
     })
 })
 
@@ -45,4 +60,5 @@ export const {
     useUpdatePatientPersonalInfoMutation,
     useGetMyPatientsQuery,
     useAdmitPatientMutation,
+    usePatientPrescriptionQuery,
 } = patientApi

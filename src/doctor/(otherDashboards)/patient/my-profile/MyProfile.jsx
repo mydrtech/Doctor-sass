@@ -1,6 +1,6 @@
 import React from "react";
 import Loader from '../../../utilities/Loader';
-import { usePatientPersonalInfoQuery } from "../../../docProvider/docQuery/doctorApiSlice";
+import { usePatientPersonalInfoQuery } from "../../../../features/auth/patientApi";
 
 const MyProfilePage = () => {
   const { data, isLoading, error } = usePatientPersonalInfoQuery();

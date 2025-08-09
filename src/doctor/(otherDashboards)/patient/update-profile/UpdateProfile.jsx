@@ -5,7 +5,7 @@ import { FaUser, FaEnvelope } from "react-icons/fa";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom"; 
-import { usePatientPersonalInfoQuery, useUpdatePatientPersonalInfoMutation } from "../../../docProvider/docQuery/doctorApiSlice";
+import { usePatientPersonalInfoQuery, useUpdatePatientPersonalInfoMutation } from "../../../../features/auth/patientApi";
 
 
 const schema = yup.object().shape({

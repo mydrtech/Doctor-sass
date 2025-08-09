@@ -1,7 +1,7 @@
 import { baseApi } from "../../services/baseApi";
 
 export const authApi = baseApi.injectEndpoints({
-    endpoints: (builder) => {
+    endpoints: (builder) => ({
         login: builder.mutation({
             query: (credentials) => ({
                 url: `api/v1/auth/login`,
@@ -9,7 +9,7 @@ export const authApi = baseApi.injectEndpoints({
                 body: credentials,
             })
         })
-    }
+    })
 })
 
 export const { useLoginMutation } = authApi;

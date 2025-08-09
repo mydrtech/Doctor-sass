@@ -9,9 +9,9 @@ import {
   FaClock,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { useAddServiceMutation } from "../../../docProvider/docQuery/doctorApiSlice";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useAddServiceMutation } from "../../../../features/auth/doctorApi";
 
 const schema = yup.object().shape({
   name: yup

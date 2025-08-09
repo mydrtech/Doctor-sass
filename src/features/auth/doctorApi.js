@@ -70,6 +70,21 @@ export const doctorApi = baseApi.injectEndpoints({
                 body: patientData,
             })
           }),
+          //   add service
+          addService: builder.mutation({
+            query: (serviceData) => ({
+                url: `/api/v1/doctor/services`,
+                method: "POST",
+                body: serviceData
+            })
+          }),
+        // get appointment requests
+        getAppointmentRequests: builder.query({
+            query: () => ({
+                url: `/api/v1/doctor/pendiq-request`,
+                method: "GET"
+            })
+        }),
 
     }),
 });
@@ -84,4 +99,6 @@ export const {
     useAddPrescriptionMutation,
     useGetMyServicesQuery,
     useAddPatientAppointmentMutation,
+    useAddServiceMutation,
+    useGetAppointmentRequestsQuery,
 } = doctorApi;

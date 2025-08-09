@@ -6,13 +6,9 @@ import {
   FaUserMd,
   FaHospital,
 } from "react-icons/fa";
-import {
-  useGetAppointmentRequestsQuery,
-  useGetMyHospitalsQuery,
-  useGetMyPatientsQuery,
-  useGetMyServicesQuery,
-} from "../../../docProvider/docQuery/doctorApiSlice";
 import Loader from "../../../utilities/Loader";
+import { useGetMyPatientsQuery } from "../../../../features/auth/patientApi";
+import { useGetAppointmentRequestsQuery, useGetMyHospitalsQuery, useGetMyServicesQuery } from "../../../../features/auth/doctorApi";
 
 export default function StatInfo() {
   const {

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FaUserMd, FaCheckCircle, FaCreditCard } from "react-icons/fa";
-import { useGetMySiteQuery } from "../../../docProvider/docQuery/doctorApiSlice";
+import { useGetMySiteQuery } from "../../../../features/auth/doctorApi";
 
 // Main Component
 export default function DoctorInfoCard() {

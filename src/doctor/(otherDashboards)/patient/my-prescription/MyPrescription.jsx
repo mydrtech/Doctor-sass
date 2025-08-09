@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Loader from '../../../utilities/Loader';
-import { usePatientPrescriptionQuery } from "../../../docProvider/docQuery/doctorApiSlice";
 import PrescriptionCard from "../../../shared-components/PrescriptionCard";
+import { usePatientPrescriptionQuery } from "../../../../features/auth/patientApi";
 
 const MyPrescriptionsPage = () => {
   const { data, isLoading } = usePatientPrescriptionQuery();

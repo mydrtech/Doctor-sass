@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { FaUser, FaEnvelope, FaCheckCircle, FaClock } from "react-icons/fa";
 import Loader from '../../../../utilities/Loader';
-import { usePatientPersonalInfoQuery } from "../../../../docProvider/docQuery/doctorApiSlice";
-
+import { usePatientPersonalInfoQuery } from "../../../../../features/auth/patientApi";
 
 const PatientInfoCard = () => {
   const {

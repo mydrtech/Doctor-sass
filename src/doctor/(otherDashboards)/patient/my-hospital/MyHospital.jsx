@@ -6,14 +6,9 @@ import {
   FaMapMarkerAlt,
   FaClock,
 } from "react-icons/fa";
-// import Moment from "react-moment";
-// import moment from "moment-timezone";
-// import Loader from "../shared/Loader";
 import Loader from '../../../utilities/Loader';
-import { usePatientMyHospitalQuery } from "../../../docProvider/docQuery/doctorApiSlice"; 
+import { usePatientMyHospitalQuery } from "../../../../features/auth/patientApi";
 
-// Default timezone set globally
-// moment.tz.setDefault("Asia/Dhaka");
 
 const MyHospital = () => {
   const { data, isLoading } = usePatientMyHospitalQuery();

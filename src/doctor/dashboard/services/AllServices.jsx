@@ -1,11 +1,9 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import { useGetMyServicesQuery } from "../../docProvider/docQuery/doctorApiSlice";
 import ServiceInfoCard from "../../shared-components/ServiceInfoCard";
 import { useForm } from "react-hook-form";
 import { FaSearch, FaSortAmountDownAlt, FaUndo } from "react-icons/fa";
 import Loader from "../../utilities/Loader";
+import { useGetMyServicesQuery } from "../../../features/auth/doctorApi";
 
 const AllServices = () => {
   const { data, isLoading, refetch } = useGetMyServicesQuery();
