@@ -6,12 +6,10 @@ export const doctorApiSlice = createApi({
     baseUrl: "https://medicare-pro-backend.vercel.app",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem("token");
-
       if (token) {
         headers.set("authorization", `Bearer ${token}`);
       }
-
-      return headers;
+return headers;
     },
   }),
 

@@ -73,7 +73,6 @@ export default function LoginPage() {
         position: "top-right",
         autoClose: 3000,
       });
-
       reset();
     } else if (result?.error) {
       toast.error(result.error?.data?.message || "Login failed", {
@@ -134,7 +133,6 @@ export default function LoginPage() {
                 <p className="text-sm text-red-500 mt-1">{errors.email.message}</p>
               )}
             </div>
-
             <div>
               <label className="block text-sm font-medium text-gray-700">Password</label>
               <input
