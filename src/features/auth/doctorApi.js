@@ -18,7 +18,7 @@ export const doctorApi = baseApi.injectEndpoints({
 
         addAssistant: builder.mutation({
             query: (assistantData) => ({
-                url: `/api/v1/doctor/assistant`,
+                url: `/api/v1/doctor/assistants`,
                 method: "POST",
                 body: assistantData,
             }),
@@ -81,7 +81,7 @@ export const doctorApi = baseApi.injectEndpoints({
         // get appointment requests
         getAppointmentRequests: builder.query({
             query: () => ({
-                url: `/api/v1/doctor/pendiq-request`,
+                url: `/api/v1/doctor/pendig-request`,
                 method: "GET"
             })
         }),

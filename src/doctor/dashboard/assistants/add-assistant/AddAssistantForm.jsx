@@ -12,7 +12,6 @@ import {
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import { useAddAssistantMutation } from "../../../../features/auth/doctorApi";
-// import { useAddAssistantMutation } from "../../../docProvider/docQuery/doctorApiSlice";
 
 const schema = yup.object().shape({
   name: yup
