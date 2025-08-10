@@ -1,28 +1,28 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
-import LoginPage from "../doctor/utilities/LoginPage";
-import DoctorSidebar from "../doctor/dashboard/components/DoctorSidebar";
-import AddAssistantForm from "../doctor/dashboard/assistants/add-assistant/AddAssistantForm";
-import AllAssistantPage from "../doctor/dashboard/assistants/AllassistantPage";
-import AddHospitalForm from "../doctor/dashboard/hospitals/add-hospital/AddHospitalForm";
-import MyHospitals from "../doctor/dashboard/hospitals/my-hospital/MyHospitals";
-import AdmitPatientForm from "../doctor/dashboard/hospitals/admit-patient/AdmitPatientForm";
-import AddPrescriptionForm from "../doctor/dashboard/patients/add-prescription/AddPrescriptionForm";
-import AddAppointmentForm from "../doctor/dashboard/patients/make-appointment/AddAppointmentForm";
-import AllPatientsPage from "../doctor/dashboard/patients/AllPatientsPage";
-import AddServiceForm from "../doctor/dashboard/services/add-service/AddServiceForm";
-import AllServices from "../doctor/dashboard/services/AllServices";
-import DoctorDashboardHomePage from "../doctor/dashboard/DoctorDashboardHomePage";
-import AssistantDashboard from "../doctor/(otherDashboards)/assistant/AssistantDashboard";
-import AssistantSidebar from "../doctor/(otherDashboards)/assistant/components/AssistantSidebar";
-import ErrorPage from '../ErrorPage';
+import DoctorSidebar from "../pages/doctor/components/DoctorSidebar";
+import AddAssistantForm from "../pages/doctor/dashboard/assistants/AddAssistantForm";
+import AllAssistantPage from "../pages/doctor/dashboard/assistants/AllassistantPage";
+import AddHospitalForm from '../pages/doctor/dashboard/hospitals/AddHospitalForm';
+import DoctorDashboard from "../pages/doctor/dashboard/DoctorDashboard";
+import LoginPage from '../pages/auth/LoginPage';
+import ErrorPage from '../pages/auth/ErrorPage';
+import MyHospitals from '../pages/doctor/dashboard/hospitals/MyHospitals';
+import AdmitPatientForm from '../pages/doctor/dashboard/hospitals/AdmitPatientForm';
+import AddPrescriptionForm from '../pages/doctor/dashboard/patients/AddPrescriptionForm';
+import AddAppointmentForm from '../pages/doctor/dashboard/patients/AddAppointmentForm';
+import AllPatientsPage from "../pages/doctor/dashboard/patients/AllPatientsPage";
+import AddServiceForm from '../pages/doctor/dashboard/services/AddServiceForm';
+import AllServices from "../pages/doctor/dashboard/services/AllServices";
+import AssistantDashboard from "../pages/assistant/AssistantDashboard";
+import AssistantSidebar from "../pages/assistant/AssistantSidebar";
+import PatientSidebar from "../pages/patient/components/PatientSidebar";
 import PatientLayout from "../layout/PatientLayout";
-import PatientSidebar from "../doctor/(otherDashboards)/patient/components/PatientSidebar";
-import PatientDashboard from "../doctor/(otherDashboards)/patient/PatientDashboard";
-import MyHospital from "../doctor/(otherDashboards)/patient/my-hospital/MyHospital";
-import MyPrescriptionsPage from '../doctor/(otherDashboards)/patient/my-prescription/MyPrescription';
-import MyProfilePage from "../doctor/(otherDashboards)/patient/my-profile/MyProfile";
-import UpdateProfile from "../doctor/(otherDashboards)/patient/update-profile/UpdateProfile";
+import PatientDashboard from "../pages/patient/PatientDashboard";
+import MyHospital from "../pages/patient/my-hospital/MyHospital";
+import MyPrescriptionsPage from "../pages/patient/my-prescription/MyPrescription";
+import MyProfile from "../pages/patient/my-profile/MyProfile";
+import UpdateProfile from "../pages/patient/update-profile/UpdateProfile";
 
 
 const Router = createBrowserRouter([
@@ -42,7 +42,7 @@ const Router = createBrowserRouter([
         errorElement: <ErrorPage />,
         //this sidebar component is use by Layout
         children: [
-          { index: true, element: <DoctorDashboardHomePage /> },
+          { index: true, element: <DoctorDashboard /> },
           { path: "assistants/add-assistant", element: <AddAssistantForm /> },
           { path: "assistants", element: <AllAssistantPage /> },
           { path: "hospitals/add-hospital", element: <AddHospitalForm /> },
@@ -88,7 +88,7 @@ const Router = createBrowserRouter([
             },
             {
               path: "my-profile",
-              element: <MyProfilePage />
+              element: <MyProfile />
             },
             {
               path: "update-profile",

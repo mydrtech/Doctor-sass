@@ -1,18 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import ScrollToTopButton from './doctor/utilities/ScrollToTopButton';
-import DocReduxWrapper from './doctor/docProvider/DocReduxWrapper';
+// import ScrollToTopButton from './doctor/utilities/ScrollToTopButton';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {  RouterProvider } from "react-router-dom";
 import Router from './routes/Router';
 import { Provider } from 'react-redux';
-import { store } from './store';
+import { store } from './app/store';
+import ScrollToTopButton from './pages/doctor/utilities/ScrollToTopButton';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      {/* <DocReduxWrapper> */}
       <Provider store={store}>
       <>
           <ToastContainer
@@ -28,7 +27,5 @@ createRoot(document.getElementById('root')).render(
           <ScrollToTopButton></ScrollToTopButton>
           </>
       </Provider>
-       
-      {/* </DocReduxWrapper> */}
   </StrictMode>,
 )

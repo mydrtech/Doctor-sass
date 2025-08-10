@@ -4,8 +4,8 @@ export const baseApi = createApi({
     reducerPath: 'baseApi',
     baseQuery: fetchBaseQuery({
         baseUrl: "https://medicare-pro-backend.vercel.app",
-        prepareHeaders: (headers) =>{
-            const token = localStorage.getItem("token");
+        prepareHeaders: (headers, { getState }) =>{
+            const token = getState().auth?.token || localStorage.getItem("token");
             if(token){
                 headers.set("authorization", `Bearer ${token}`)
             }
